@@ -1,11 +1,19 @@
-# Project Name
+# Cross Chain Rebase Token
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Version](https://img.shields.io/badge/version-0.1.0-green.svg)
 
 ## Overview
 
-A brief description of your DeFi project. Explain in 2-3 sentences what problem your project solves and its core functionality. Include any key differentiating factors or innovations.
+This project implements a cross chain rebase token using CCIP. This protocol allows users to deposit into a vault contract and in return receive rebase tokens that represent their underlying balance. 
+
+
+1. Rebase token -> balanceOf function is dynamic to show the changing banance with time. 
+   1. The balance increases linearly with time.
+   2. Mint tokens to our users every time they perform an action (minting, burning, transferring, bridging, etc)
+2. Interest rate
+   1. Individually set an interest rate or each user based on some global interest rate of the protocol at the time the users deposits
+   2. This global interest rate can only decrease to incentivize/reward early adopters
 
 ## Features
 
