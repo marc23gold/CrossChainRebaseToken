@@ -39,8 +39,9 @@ contract RebaseToken is ERC20 {
     }
 
     function mintRebase(uint256 _amount, address _to) external{
-         _mint(_to, _amount);
+        _mintAccruedInterest( _to);
         s_userInterestRate[msg.sender] = s_interestRate;
+         _mint(_to, _amount);
 
     }
 
@@ -48,6 +49,9 @@ contract RebaseToken is ERC20 {
 
     }
 
+    function _mintAccruedInterest( address _to) internal{
+        
+    }
     /**
      * @notice Gets the global interest rate
      * @return The global interest rate
